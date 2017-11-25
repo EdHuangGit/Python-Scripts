@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 
 #check for root privileges
@@ -9,8 +10,10 @@ environment = os.path.join("/etc", "environment")
 
 def toggle_comment(line):
     if line.startswith('#'):
+	print('Removing # (GM Proxy)')
 	return line[1:]
     else: 
+	print('Adding # (No Proxy)')
 	return '#' + line
 
 lines = list()
